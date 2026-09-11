@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	    <title>My Spring Boot App</title>
+</head>
+<body>
+	<h1>movies</h1>
+	<h3 th:text="${movie}"></h3>
+	
+	<div th:if="${!isLoggedIn}">
+		<p th:text="${discription}"></p>
+		<p>Please log in to read the full movie description!</p>
+		
+	</div>
+	<div th:if="${isLoggedIn}">
+		<p>		**Godzilla** is a gigantic prehistoric creature and one of the most famous monsters in popular culture. Often portrayed as a massive, dinosaur-like reptile, Godzilla is known for his enormous size, incredible strength, tough, nearly indestructible body, and devastating atomic breath.
+
+		Godzilla rises from the depths of the ocean and attacks cities, leaving destruction in his path. However, he is not always portrayed as a villain. In many stories, Godzilla acts as a force of nature or even a protector of humanity, battling other giant monsters that threaten the Earth.
+
+		With his powerful roar, towering body, sharp dorsal spines, and glowing atomic breath, Godzilla has become an iconic symbol of giant monsters and cinematic science fiction. His stories often explore themes such as humanity's relationship with nature, the consequences of nuclear weapons, environmental destruction, and the dangers of uncontrolled scientific experiments.
+</p>
+	</div>
+</body>
+</html>
