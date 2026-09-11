@@ -1,5 +1,6 @@
 package com.example.CWHWSPRINGBOOT.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+
 import com.example.CWHWSPRINGBOOT.Models.Product;
 import java.util.List;
 import java.util.ArrayList;
@@ -8,7 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 @Controller
 public class CWDAY4 {
-@GetMapping("/fullpage")
+@GetMapping("/product-list")
 public String Products(Model model) {
 	List<Product> products=new ArrayList<>();
 	products.add(new Product(1,"maggi",34.5f));
@@ -18,7 +19,7 @@ public String Products(Model model) {
     return "day4cw";
 }
 
-@GetMapping("/singlepage")
+@GetMapping("/single-product")
 public String Product(Model model) {
 	List<Product> singleproducts=new ArrayList<>();
 	singleproducts.add(new Product(1,"maggi",34.5f));
