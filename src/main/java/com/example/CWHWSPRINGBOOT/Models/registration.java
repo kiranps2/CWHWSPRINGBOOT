@@ -2,7 +2,7 @@ package com.example.CWHWSPRINGBOOT.Models;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
-public class Registration {
+public class registration {
 	@NotBlank(message = "Name is required")
     public String name;
     

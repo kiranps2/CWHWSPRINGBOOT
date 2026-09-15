@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <form th:action="@{/submit}" method="post" th:object="${userDetails}">
+    <form th:action="@{/submit}" method="post" th:object="${registrations}">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" >
         <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
@@ -10,7 +10,7 @@
         <input type="text" id="email" name="email" >
         <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
         <br>
-		<label for="address">Email:</label>
+		<label for="address">address:</label>
 		<input type="text" id="address" name="address" >
 		<span th:if="${#fields.hasErrors('address')}" th:errors="*{address}"></span>
         <button type="submit">Submit</button>

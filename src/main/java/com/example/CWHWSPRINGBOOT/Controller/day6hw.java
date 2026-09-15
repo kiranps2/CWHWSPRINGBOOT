@@ -11,15 +11,14 @@ import com.example.CWHWSPRINGBOOT.Models.*;
 @Controller
 public class day6hw {
 	@GetMapping("/register")
-	public String showForm(Registration registration) {
-	   
-	    
+	public String showForm(Model model) {
+	    model.addAttribute("registrations", new registration());
 	    return "day6hw";
 	}
 
 	 @PostMapping("/submit")
-	    public String submitForm(@Valid @ModelAttribute("userDetails") Registration registration, BindingResult result, Model model) {
-	        model.addAttribute("registration", registration);
+	    public String submitForm(@Valid @ModelAttribute("registrations") registration registrations, BindingResult result, Model model) {
+	        model.addAttribute("registrations", registrations);
 	        if (result.hasErrors()) {
 	            return "day6hw";
 	        } else {
